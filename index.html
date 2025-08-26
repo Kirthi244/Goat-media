@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat Media Hub - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-chart-line logo-icon"></i>
+                    <h1 class="logo-text">Goat Media Hub</h1>
+                </div>
+                <nav class="main-nav" role="navigation">
+                    <button class="nav-item active" data-section="overview" tabindex="0" aria-label="Overview Dashboard">
+                        <i class="fas fa-home"></i>
+                        <span>Overview</span>
+                    </button>
+                    <button class="nav-item" data-section="analytics" tabindex="0" aria-label="Analytics Dashboard">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </button>
+                    <button class="nav-item" data-section="content" tabindex="0" aria-label="Content Management">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Content</span>
+                    </button>
+                    <button class="nav-item" data-section="team" tabindex="0" aria-label="Team Management">
+                        <i class="fas fa-users"></i>
+                        <span>Team</span>
+                    </button>
+                </nav>
+                <div class="header-actions">
+                    <button class="action-btn notification-btn" tabindex="0" aria-label="Notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="action-btn profile-btn" tabindex="0" aria-label="User Profile">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h2>Dashboard Overview</h2>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-filter="all" tabindex="0">All Time</button>
+                        <button class="filter-btn" data-filter="month" tabindex="0">This Month</button>
+                        <button class="filter-btn" data-filter="week" tabindex="0">This Week</button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="dashboard-card stats-card" tabindex="0" role="button" aria-label="Total Views Statistics">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Total Views</h3>
+                            <div class="card-value">2.4M</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+12.5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card stats-card" tabindex="0" role="button" aria-label="Engagement Rate Statistics">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Engagement Rate</h3>
+                            <div class="card-value">8.7%</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+3.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card stats-card" tabindex="0" role="button" aria-label="Revenue Statistics">
+                        <div class="card-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Revenue</h3>
+                            <div class="card-value">$45.2K</div>
+                            <div class="card-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+18.9%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card stats-card" tabindex="0" role="button" aria-label="Active Campaigns Statistics">
+                        <div class="card-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Active Campaigns</h3>
+                            <div class="card-value">12</div>
+                            <div class="card-change neutral">
+                                <i class="fas fa-minus"></i>
+                                <span>No change</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Section -->
+                <div class="chart-section">
+                    <div class="dashboard-card chart-card">
+                        <div class="card-header">
+                            <h3>Performance Analytics</h3>
+                            <div class="chart-controls">
+                                <button class="chart-btn active" data-chart="views" tabindex="0">Views</button>
+                                <button class="chart-btn" data-chart="engagement" tabindex="0">Engagement</button>
+                                <button class="chart-btn" data-chart="revenue" tabindex="0">Revenue</button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="performanceChart" width="800" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Section -->
+            <section id="analytics" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Analytics Dashboard</h2>
+                    <button class="cta-btn primary" tabindex="0">
+                        <i class="fas fa-download"></i>
+                        Export Report
+                    </button>
+                </div>
+                <div class="analytics-content">
+                    <p>Analytics dashboard content will be loaded here...</p>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section id="content" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Content Management</h2>
+                    <button class="cta-btn primary" tabindex="0">
+                        <i class="fas fa-plus"></i>
+                        Create Content
+                    </button>
+                </div>
+                <div class="content-management">
+                    <p>Content management tools will be loaded here...</p>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section id="team" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Team Management</h2>
+                    <button class="cta-btn primary" tabindex="0">
+                        <i class="fas fa-user-plus"></i>
+                        Add Member
+                    </button>
+                </div>
+                <div class="team-grid">
+                    <div class="dashboard-card team-card" tabindex="0" role="button" aria-label="Team Member: Sarah Johnson">
+                        <div class="team-avatar">
+                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Sarah Johnson">
+                        </div>
+                        <div class="team-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Content Manager</p>
+                            <div class="team-stats">
+                                <span>24 Posts</span>
+                                <span>1.2M Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card team-card" tabindex="0" role="button" aria-label="Team Member: Mike Chen">
+                        <div class="team-avatar">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Mike Chen">
+                        </div>
+                        <div class="team-info">
+                            <h4>Mike Chen</h4>
+                            <p>Video Editor</p>
+                            <div class="team-stats">
+                                <span>18 Videos</span>
+                                <span>890K Views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card team-card" tabindex="0" role="button" aria-label="Team Member: Emma Davis">
+                        <div class="team-avatar">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Emma Davis">
+                        </div>
+                        <div class="team-info">
+                            <h4>Emma Davis</h4>
+                            <p>Social Media Manager</p>
+                            <div class="team-stats">
+                                <span>156 Posts</span>
+                                <span>2.1M Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
